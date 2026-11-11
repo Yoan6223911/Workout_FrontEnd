@@ -2,6 +2,13 @@
 
 Application React + Vite, en français, avec thème clair/sombre et affichage responsive.
 
+## Lien de l'application web 
+https://workout-front-end-kappa.vercel.app/
+Le frontend a été hébergé sur Vercel une plaeforme permettant de déployer des app gratuitement
+
+## Repo Github public
+https://github.com/Yoan6223911/Workout_FrontEnd
+
 ## Démarrage
 
 ```sh
@@ -9,7 +16,6 @@ npm ci
 npm run dev
 ```
 
-Ouvrir l'adresse affichée par Vite (normalement http://127.0.0.1:5173).
 Le front appelle directement **https://workout-api-eqyt.kennhosting.app**.
 Il ne nécessite pas de backend local ni de proxy Vite.
 
@@ -74,15 +80,6 @@ L'API ne propose pas de PATCH pour les associations. Modifier les séries et
 répétitions effectue DELETE puis POST, avec tentative de restauration si le
 POST échoue. Ces deux requêtes ne sont pas atomiques.
 
-## CORS et déploiement
-
-Le serveur distant doit autoriser l'origine du front pour les appels directs.
-Le middleware CORS est configuré dans `nodejs_stage/src/server.js`. Redéployer
-le backend pour activer cette correction à distance.
-Toutes les origines sont autorisées avec `Access-Control-Allow-Origin: *`,
-y compris localhost sur tous les ports et les fronts déployés.
-La variable `CORS_ORIGINS` n'est plus utilisée.
-
 ## Vérifications et présentation du code
 
 ```sh
@@ -100,3 +97,11 @@ Les tests utilisent des réponses HTTP simulées : ils ne modifient
 pas les données de l'API distante. `npm run preview` prévisualise le build.
 Les polices DM Sans et Manrope viennent de Google Fonts, avec repli système.
 Le visuel d'haltère est réalisé en CSS.
+
+## Utilisation de l'IA
+Il est important de souligner que l'IA a généré 100% du code frontend.
+Bien évidemment c'est moi qui lui ai donné l'architecture à suivre afin d'avoir une certaine hiérarchie
+mais tout le front est généré avec de l'IA, jusqu'au thème et couleurs de l'application.
+
+## Autre Source
+La documentation de Vercel sur comment héberger son application https://vercel.com/docs/deployments
